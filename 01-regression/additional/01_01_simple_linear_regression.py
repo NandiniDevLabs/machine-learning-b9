@@ -46,7 +46,9 @@ print(model.feature_names_in_)
 # Ex: sales = 3.151526768070651 + 0.04469599*tv
 
 # Train the model on Full Data
-model.fit(X,y)
+final_model = LinearRegression()
+final_model.fit(X,y)
+X_new = [[30]] # Unseen data
 y_new_predict = model.predict(X_new)
 
 # Save the model
