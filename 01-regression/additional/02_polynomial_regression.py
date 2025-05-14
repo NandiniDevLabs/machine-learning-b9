@@ -69,10 +69,10 @@ dump(final_poly_converter,'poly_converter.joblib')
 
 ###### ------- Applying pre-trained model to new samples --------- ###### 
 # Loading polynomial converter
-loaded_poly = load('poly_converter.joblib')
+loaded_poly_converter = load('poly_converter.joblib')
 # Loading model 
 loaded_model = load('sales_poly_model.joblib')
 
 campaign = [[149,22,12]]
-campaign_poly = loaded_poly.transform(campaign)
-final_model.predict(campaign_poly)
+campaign_poly = loaded_poly_converter.transform(campaign)
+loaded_model.predict(campaign_poly)
